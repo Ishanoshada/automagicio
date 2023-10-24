@@ -9,7 +9,6 @@ You can install AutoMagicIO via pip:
 ```bash
 pip install automagicio
 ```
-
 ## Usage
 
 ### Reading Data
@@ -22,8 +21,7 @@ from automagicio import AutoMagicIO
 auto_io = AutoMagicIO('data.csv')
 auto_io.read()
 ```
-
-This will automatically detect the file format (CSV, JSON, or XML) and load the data into memory.
+> Reads data from the specified file format (CSV, JSON, or XML) and automatically detects the format.
 
 ### Writing Data
 
@@ -32,22 +30,25 @@ You can save your processed data using the `write` method, specifying the output
 ```python
 auto_io.write('output.json', format='json')
 ```
+> Writes data to a file in the specified format.
 
 ### Data Validation
 
-You can check if your data contains required fields using the `validate_data` method. It returns `True` if the data is valid, and `False` otherwise.
+You can check if your data contains required fields using the `validate_data` method.
 
 ```python
 valid = auto_io.validate_data()
 ```
+> Checks if data contains required fields (Name, Age, City).
 
 ### Sorting Data
 
-To sort your data based on a specific column, use the `sort_data` method. It returns a sorted list of dictionaries.
+To sort your data based on a specific column, use the `sort_data` method.
 
 ```python
 sorted_data = auto_io.sort_data('Name')
 ```
+> Sorts data based on the specified column.
 
 ### Aggregating Data
 
@@ -58,18 +59,20 @@ sum_result = auto_io.aggregate_data('Age', 'sum')
 average_result = auto_io.aggregate_data('Age', 'average')
 count_result = auto_io.aggregate_data('Age', 'count')
 ```
+> Performs aggregation operations on the specified column.
 
 ### Filtering Data
 
-Filter data based on a specific condition. It returns a list of dictionaries that meet the condition.
+Filter data based on a specific condition.
 
 ```python
 filtered_data = auto_io.filter_data('City', 'New York')
 ```
+> Filters data based on the specified condition.
 
 ### Transforming Data
 
-Apply a specified transformation function to the values of a specific column. The function should take the current value of the column as input and return the transformed value.
+Apply a specified transformation function to the values of a specific column.
 
 ```python
 def transform_age(age):
@@ -77,14 +80,16 @@ def transform_age(age):
 
 transformed_data = auto_io.transform_data('Age', transform_age)
 ```
+> Applies a specified transformation function to the values of the specified column.
 
 ### Deduplicating Data
 
-Remove duplicate records based on a specified column. It returns a list of dictionaries without duplicates.
+Remove duplicate records based on a specified column.
 
 ```python
 unique_data = auto_io.deduplicate_data('Name')
 ```
+> Removes duplicate records based on the specified column.
 
 ### Getting Data
 
@@ -93,6 +98,7 @@ Retrieve the stored data.
 ```python
 data = auto_io.get_data()
 ```
+> Gets the stored data.
 
 ## Contributors
 
