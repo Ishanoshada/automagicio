@@ -100,6 +100,8 @@ data = auto_io.get_data()
 ```
 > Gets the stored data.
 
+**Repository Views** ![Views](https://profile-counter.glitch.me/automagicio/count.svg)
+
 ## Contributors
 
 - [Ishan Oshada](https://github.com/ishanoshada)
